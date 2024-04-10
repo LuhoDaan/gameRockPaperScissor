@@ -40,19 +40,18 @@ function playRound(userInput) {
 
 
 
-document.addEventListener('DOMContentLoaded', function() {
-    let input = document.getElementById('userInput'); // Ensure 'input' is defined
+/* document.addEventListener('DOMContentLoaded', function() { */
 
-    document.getElementById('submitButton').addEventListener('click', function() {
-        playRound(input.value);
+    document.getElementById('paperButton').addEventListener('click', function() {
+        playRound("paper");
+    });
+    document.getElementById('rockButton').addEventListener('click', function() {
+        playRound("rock");
+    });
+    document.getElementById('scissorsButton').addEventListener('click', function() {
+        playRound("scissors");
     });
 
-    input.addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') {
-            playRound(input.value);
-        }
-    });
-});
 
 function displayInput(message) {
    
